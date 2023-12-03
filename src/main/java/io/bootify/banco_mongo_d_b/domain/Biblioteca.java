@@ -8,6 +8,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 
 @Getter
@@ -16,6 +17,8 @@ public abstract class Biblioteca {
 
     @Id
     private Long id;
+
+    @Field("nombre_biblioteca")
 
     @Size(max = 255)
     private String nombre;
