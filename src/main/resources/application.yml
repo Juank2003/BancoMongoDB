@@ -1,10 +1,11 @@
 spring:
   data:
     mongodb:
-      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/BancoMongoDB}
-      auto-index-creation: true
-  docker:
-    compose:
-      lifecycle-management: start-only
+      uri: mongodb://localhost:27017/mongoDB
+docker:
+  compose:
+    lifecycle-management: start-only
 springdoc:
   pathsToMatch: /api/**
+server:
+  port: 8080
